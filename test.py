@@ -36,7 +36,7 @@ while True:
             wGap = (imgsize - wCal) // 2
             imgwhite[:, wGap:wGap + wCal] = imgresize
             pred,index=classifier.getPrediction(imgwhite)
-
+            print(pred,index)
 
 
         else:
@@ -46,7 +46,7 @@ while True:
             hGap = (imgsize - hCal) // 2
             imgwhite[hGap:hGap + hCal, :] = imgresize
             pred, index = classifier.getPrediction(imgwhite)
-
+            print(pred, index)
 
         cv2.imshow("Image1", img)
         cv2.imshow("Imagewhite", imgwhite)
